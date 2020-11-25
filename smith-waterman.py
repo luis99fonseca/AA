@@ -62,6 +62,6 @@ def backtrace():
 
 dinamic_programing()
 backtrace()
-
+print("max: ", np.max(matrix))
 print(matrix)
 print(directions_matrix)
