@@ -24,8 +24,6 @@ matrix[:, 0] = 0
 directions_matrix = np.zeros((len(word01) + 1, len(word02) + 1))
 
 def memoize(f):
-    # TODO: maybe passar pa 1 dicionário, pa so resolver os sub problems necessarios, ou testar dic vs matrix pa ver
-    #  qual o fastest
     def helper(x, y):
         if matrix[x, y] == -1:
             matrix[x, y], directions_matrix[x, y] = f(x, y)
@@ -58,12 +56,12 @@ def memoize(f):
 #     return matrix[x, y]
 
 @memoize
-def memoization2(x, y):
+def memoization(x, y):
     eq = (match_bonus if (word02[y - 1] == word01[x - 1]) else mismatch_penalty)
 
-    v_up = memoization2(x - 1, y) + gap_penalty
-    v_left = memoization2(x, y - 1) + gap_penalty
-    v_diagonal = memoization2(x - 1, y - 1) + eq
+    v_up = memoization(x - 1, y) + gap_penalty
+    v_left = memoization(x, y - 1) + gap_penalty
+    v_diagonal = memoization(x - 1, y - 1) + eq
 
     return max(0, v_up, v_left, v_diagonal), np.argmax([0, v_up, v_left, v_diagonal])
 
@@ -93,7 +91,7 @@ def backtrace():
     print(intersection_string[::-1], intersection_string2[::-1])
 
 print(matrix)
-memoization2(len(word01), len(word02))
+memoization(len(word01), len(word02))
 print(matrix)
 print(directions_matrix)
 backtrace()
