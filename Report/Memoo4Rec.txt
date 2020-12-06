@@ -1,0 +1,58 @@
+Memo:
+lines: 2 | cols: 2
+lines: 2 | cols: 2
+Scoring: 0.00016832351684570312 backtrace: 0.00019431114196777344 total: 0.00036263465881347656
+bo: 3 fc: 4
+
+lines: 4 | cols: 4
+lines: 4 | cols: 4
+Scoring: 0.0005407333374023438 backtrace: 0.00012493133544921875 total: 0.0006656646728515625
+bo: 27 fc: 28
+
+lines: 6 | cols: 6
+lines: 6 | cols: 6
+Scoring: 0.001247406005859375 backtrace: 0.00013375282287597656 total: 0.0013811588287353516
+bo: 75 fc: 76
+
+lines: 8 | cols: 8
+lines: 8 | cols: 8
+Scoring: 0.002385377883911133 backtrace: 0.0001385211944580078 total: 0.0025238990783691406
+bo: 147 fc: 148
+
+lines: 10 | cols: 10
+lines: 10 | cols: 10
+Scoring: 0.003534555435180664 backtrace: 0.0001342296600341797 total: 0.0036687850952148438
+bo: 243 fc: 244
+
+lines: 12 | cols: 12
+lines: 12 | cols: 12
+Scoring: 0.0051729679107666016 backtrace: 0.00017523765563964844 total: 0.00534820556640625
+bo: 363 fc: 364
+
+
+Rec:-----------------------
+3000
+lines: 2 | cols: 2
+total. 1.5497207641601562e-05
+bo: 3 fc: 4
+
+lines: 4 | cols: 4
+total. 4.410743713378906e-05
+bo: 93 fc: 94
+
+lines: 6 | cols: 6
+total. 0.0008523464202880859
+bo: 2523 fc: 2524
+
+lines: 8 | cols: 8
+total. 0.026256561279296875
+bo: 72957 fc: 72958
+
+lines: 10 | cols: 10
+total. 0.7220027446746826
+bo: 2193843 fc: 2193844
+
+lines: 12 | cols: 12
+total. 22.30945324897766
+bo: 67570077 fc: 67570078
+
