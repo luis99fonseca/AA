@@ -21,8 +21,8 @@ def countProb(word):
     return counter
 
 
-trials = [10, 100, 1000, 10000, 100000, 1000000]
-words_len = [10000] #[10, 100, 1000, 10000, 100000, 1000000]
+trials = [10000] #[10, 100, 1000, 10000, 100000, 1000000]
+words_len = [10000000] #[10, 100, 1000, 10000, 100000, 1000000]
 
 for word_len in words_len:
     word = "luiscarlosduartefonseca"
