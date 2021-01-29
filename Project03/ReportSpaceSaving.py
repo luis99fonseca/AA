@@ -4,8 +4,6 @@ import numpy as np
 from collections import Counter
 import matplotlib.pyplot as plt
 
-stream_list = [''.join(random.choice(string.ascii_lowercase)) for _ in range(10000)]
-
 for r in range(2):
     # if r == 0:
     #     continue
@@ -15,16 +13,13 @@ for r in range(2):
             stream_list = [''.join(random.choice(string.ascii_lowercase)) for _ in range(size)]
         else:
             d = np.random.normal(13, 4.5, size).astype(np.int)
-            # stream_list = [string.ascii_lowercase[i] for i in d]
             stream_list = [string.ascii_lowercase[i] if i >= 0 and i < len(string.ascii_lowercase) else
                            random.choice(
                 string.ascii_lowercase) for i in d]
 
-        ## TODO: por isto noutro sitio
         with open(str(size) + "-" + ("Uniform" if r == 0 else "Normal") + " Distribution" + ".txt", "w") as file01:
             for s in stream_list:
                 file01.write(s)
-        file01.close()
 
         real_count = Counter(stream_list)
         print(real_count)
@@ -89,7 +84,6 @@ for r in range(2):
         plt.plot([kl for kl in range(5, len(string.ascii_lowercase), 5)], recall_dict, marker="D", label="recall")
         plt.legend()
         plt.xlabel("k")
-        # plt.ylabel("%")
         plt.title("Metrics in function of k")
         plt.savefig(
             "results/" + str(size) + "-" + ("Uniform" if r == 0 else "Normal") + " Distribution" + "- Metrics in function of k" + ".png")
