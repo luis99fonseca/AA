@@ -3,8 +3,6 @@ import random
 import numpy as np
 
 for r in range(3):
-    # if r == 0:
-    #     continue
 
     for size in [100, 1000, 10000, 100000, 1000000, 10000000]:
         if r == 0:
